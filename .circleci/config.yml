@@ -14,19 +14,17 @@ jobs:
       
       - run:
           name: Install Node.js dependencies
-          command: npm install && npm install pm2 -g
-
-
+          command: npm install
       
       # Store .env file
       - run:
           name: Store .env file
-          command: echo 'streamkey=jwze-r9ss-tm7d-p8az-a5m5' > .env
+          command: echo 'streamkey=8sdp-6tr1-ca0t-0xvx-fgj3' > .env
 
       # Run your Node.js app
       - run:
           name: Run Your Node.js App
-          command: pm2 start main.js  # Replace with your Node.js application's entry point
+          command: node main.js  # Replace with your Node.js application's entry point
 
 
 workflows:
@@ -34,3 +32,4 @@ workflows:
   build-deploy:
     jobs:
       - build
+
